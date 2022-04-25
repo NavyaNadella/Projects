@@ -9,6 +9,7 @@ public class BankingApplication {
 
 class BankAccount {
     int balance;
+    // Tracks the last deposit or withdraw amount
     int previousTransaction;
     String customerId;
     String customerName;
