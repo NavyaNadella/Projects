@@ -1,9 +1,13 @@
+package bankingapp;
+
 import java.util.Scanner;
 
 public class BankingApplication {
     public static void main(String[] args){
         BankAccount acc = new BankAccount("Ajay" ,"BA001");
+        BankAccount acc2 = new BankAccount("Navya", "BA002");
         acc.showMenu();
+        acc2.showMenu();
     }
 }
 
@@ -13,10 +17,17 @@ class BankAccount {
     int previousTransaction;
     String customerId;
     String customerName;
+    static String bankName;
+
+    static {
+        bankName = "Navya LLC";
+        System.out.println("BANK NAME IS: " + bankName);
+    }
 
     BankAccount(String cname,String cid) {
         this.customerName = cname;
         this.customerId = cid;
+
     }
 
     void deposit(int amount) {
